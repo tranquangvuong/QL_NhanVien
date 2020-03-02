@@ -1,0 +1,61 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.layuot2{
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    background-color:#007fff ;/*xanhduong*/
+}
+.layuot2 header
+{
+    background: #ff7f00;
+    height: 0px;
+    padding-bottom: 10%;
+}
+.layuot2 article{
+    min-height: 400px;
+    width: 30%;
+    background-color: white;
+    float: left;
+}
+.layuot2 nav{
+    width: 500px;
+    height: 5px;
+    padding-bottom: 5%;
+    background-color:red;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.layuot2 footer{
+    padding-bottom: 3%;
+    background-color: #00ff00;
+    clear: both;
+}
+.menu>ul>li {
+    display: inline-block;
+    position: relative;
+}
+
+.menu>ul>li>a {
+    display: block;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: larger;
+    padding: 0 10px;
+    line-height: 40px;
+}
+
+.menu>ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    background-color: orangered;
+    text-align: left;
+}

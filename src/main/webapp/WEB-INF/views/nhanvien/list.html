@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Customers</title>
+</head>
+<body>
+<a href="/create-nhanvien">Create new customer</a>
+<h1>Customers</h1>
+<table border="1">
+    <tr>
+        <th>ma nhan vien</th>
+        <th>ho ten</th>
+        <th>ngay sinh</th>
+        <th>cap do</th>
+        <th>ten phong ban</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <th:block th:each="nhanvien : ${nhanviens}">
+        <tr>
+            <td th:text="${nhanvien.manhanvien}"></td>
+            <td th:text="${nhanvien.hoten}"></td>
+            <td th:text="${nhanvien.ngaysinh}"></td>
+            <td th:text="${nhanvien.capdo}"></td>
+            <td th:text="${nhanvien.phongban.tenphongban}"></td>
+            <td><a th:href="@{/edit-nhanvien/__${nhanvien.id}__ }">Edit</a></td>
+            <td><a th:href="@{/delete-nhanvien/__${nhanvien.id}__ }">Delete</a></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>

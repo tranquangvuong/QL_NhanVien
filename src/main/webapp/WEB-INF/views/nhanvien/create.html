@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customer</title>
+</head>
+<body>
+<h1>Create customer</h1>
+<p>
+    <a href="/nhanviens">Customer list</a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/create-nhanvien}" th:object="${nhanvien}" method="post">
+    <table>
+        <tr>
+            <td>ma nhan vien:</td>
+            <td><input type="text" th:field="*{manhanvien}"/></td>
+        </tr>
+        <tr>
+            <td>ho ten:</td>
+            <td><input type="text" th:field="*{hoten}"/></td>
+        </tr>
+        <tr>
+            <td>ngaysinh:</td>
+            <td><input type="text" th:field="*{ngaysinh}"/></td>
+        </tr>
+        <tr>
+            <td>cap do:</td>
+            <td><input type="text" th:field="*{capdo}"/></td>
+        </tr>
+        <tr>
+            <td>ten phong ban:</td>
+            <td>
+                <select th:field="*{phongban}">
+                    <option th:each="p : ${phongbans}" th:value="${p.id}" th:text="${p.tenphongban}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create nv"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
